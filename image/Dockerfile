@@ -1,4 +1,4 @@
-FROM quay.io/roche/rust:1.47.0-alpine
+FROM quay.io/roche/rust:1.49.0-alpine
 
 COPY . /app-build
 
