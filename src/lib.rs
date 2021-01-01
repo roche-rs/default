@@ -1,5 +1,5 @@
-// Local unit tests are currently possible using the format below but will significantly impact build time.
-// Ideally `roche test` should copy lib.rs, tests/ and functions.rs to the dev container and run them 
+// These tests can be ran locally but will significantly impact build time.
+// Ideally `roche test` should be used It copies lib.rs, functions.rs to the dev container and runs `cargo test --lib` 
 pub mod functions;
 
 #[cfg(test)]
