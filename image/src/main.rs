@@ -1,7 +1,7 @@
 use std::env;
 use dotenv::dotenv;
 use async_std::task;
-mod app;
+mod functions;
 
 fn main() -> Result<(), std::io::Error> {
     if cfg!(debug_assertions) {
@@ -13,7 +13,7 @@ fn main() -> Result<(), std::io::Error> {
         tide::log::start();
         let mut app = tide::new();
         app.at("/").nest({
-            app::functions::handler()
+            functions::handler()
         });
         println!("      Running server on: http://localhost:{}/", port);
         app.listen(address).await?;
