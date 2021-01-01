@@ -1,5 +1,5 @@
 [package]
-name = "{{project-name}}"
+name = "df" 
 version = "0.1.0"
 authors = ["{{authors}}"]
 edition = "2018"
@@ -9,5 +9,9 @@ edition = "2018"
 [dependencies]
 async-std = { version = "1.6.5", features = ["attributes"] }
 surf = "2.1.0"
-
+tide-testing = "0.1.2"
+tide = "0.15"
 [roche]
+dev_build_image = "quay.io/roche/dev-default:1.2.0"
+release_build_image = "quay.io/roche/default:1.1.0"
+runtime_image = "quay.io/roche/alpine-libgcc:3.12"

@@ -5,28 +5,37 @@
 This template is designed for compiling Rust libraries into docker and 
 publishing the resulting package a knative service.
 
-[tutorials]: TBD
+[tutorials]: https://roche-rs.org/tutorials/index.html
 [template-docs]: TBD
 
 ## 🚴 Usage
 
-### 🐑 Use `cargo roche generate` to Clone this Template
-
+### Use 🐑 `roche init default` to Clone this Template
+R
+Roche uses the excellent cargo-generate under the hood.
 [Learn more about `cargo generate` here.](https://github.com/ashleygwilliams/cargo-generate)
 
 ```
-roche generate --name my-project
+roche init default --name my-project
 cd my-project
 ```
 
 ### 🛠️ Build with `roche build`
 
 ```
+docker login
 roche build
 ```
 
-### 🔬 Test in docker container with `roche test`
+### 🔬 Testing the library
 
 ```
-roche test --headless --firefox
+cargo test --lib
+```
+
+### 🐑 Running integration tests
+
+```
+docker run -p 8080:8080 name/of/image
+cargo test
 ```
