@@ -1,12 +1,9 @@
 ## About
 
-[**📚 Read this template tutorial! 📚**][template-docs]
+[**📚 Read this template tutorial! 📚**](https://roche-rs.org/tutorials/project.html)
 
-This template is designed for compiling Rust libraries into docker and 
+This template is designed roche and is used for compiling Rust libraries into docker and 
 publishing the resulting package as knative service.
-
-[tutorials]: https://roche-rs.org/tutorials/index.html
-[template-docs]: TBD
 
 ## 🚴 Usage
 
