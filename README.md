@@ -3,7 +3,7 @@
 [**📚 Read this template tutorial! 📚**][template-docs]
 
 This template is designed for compiling Rust libraries into docker and 
-publishing the resulting package a knative service.
+publishing the resulting package as knative service.
 
 [tutorials]: https://roche-rs.org/tutorials/index.html
 [template-docs]: TBD
@@ -11,7 +11,7 @@ publishing the resulting package a knative service.
 ## 🚴 Usage
 
 ### Use 🐑 `roche init default` to Clone this Template
-R
+
 Roche uses the excellent cargo-generate under the hood.
 [Learn more about `cargo generate` here.](https://github.com/ashleygwilliams/cargo-generate)
 
@@ -30,12 +30,12 @@ roche build
 ### 🔬 Testing the library
 
 ```
-cargo test --lib
+roche test --lib
 ```
 
 ### 🐑 Running integration tests
 
 ```
 docker run -p 8080:8080 name/of/image
-cargo test
+cargo test --test '*'
 ```
